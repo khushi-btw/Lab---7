@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aurelia | Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="symbol">⚗</div>
+
+            <div>
+                <h1>AURELIA</h1>
+                <p>CALCULATOR</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- INTRO -->
+        <section class="intro">
+
+            <p class="eyebrow">CALCULATOR</p>
+
+            <h2>
+                Simple.<br>
+                <span>Precise.</span>
+            </h2>
+
+            <p class="intro-text">
+                Perform basic mathematical calculations
+                quickly and easily.
+            </p>
+
+        </section>
+
+
+        <!-- CALCULATOR -->
+        <section class="calculator">
+
+            <!-- DISPLAY -->
+            <div class="display">
+
+                <div class="expression" id="expression">
+                    Ready for calculation...
+                </div>
+
+                <div class="display-result" id="display">
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <form id="calculatorForm">
+
+                <div class="calculator-grid">
+
+                    <!-- ROW 1 -->
+                    <button
+                        type="button"
+                        class="control"
+                        onclick="clearCalculator()">
+                        AC
+                    </button>
+
+                    <button
+                        type="button"
+                        class="control"
+                        onclick="deleteNumber()">
+                        ⌫
+                    </button>
+
+                    <button
+                        type="button"
+                        class="control"
+                        onclick="percentage()">
+                        %
+                    </button>
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="chooseOperator('/')">
+                        ÷
+                    </button>
+
+
+                    <!-- ROW 2 -->
+                    <button
+                        type="button"
+                        onclick="appendNumber('7')">
+                        7
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('8')">
+                        8
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('9')">
+                        9
+                    </button>
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="chooseOperator('*')">
+                        ×
+                    </button>
+
+
+                    <!-- ROW 3 -->
+                    <button
+                        type="button"
+                        onclick="appendNumber('4')">
+                        4
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('5')">
+                        5
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('6')">
+                        6
+                    </button>
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="chooseOperator('-')">
+                        −
+                    </button>
+
+
+                    <!-- ROW 4 -->
+                    <button
+                        type="button"
+                        onclick="appendNumber('1')">
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('2')">
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendNumber('3')">
+                        3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="chooseOperator('+')">
+                        +
+                    </button>
+
+
+                    <!-- ROW 5 -->
+                    <button
+                        type="button"
+                        class="zero"
+                        onclick="appendNumber('0')">
+                        0
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="appendDecimal()">
+                        .
+                    </button>
+
+                    <button
+                        type="button"
+                        class="equals"
+                        onclick="calculate()">
+                        =
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- KEYBOARD SUPPORT -->
+            <div class="keyboard-hint">
+                <span>⌨</span>
+                Keyboard supported
+            </div>
+
+
+            <!-- STATUS -->
+            <div class="status" id="status">
+                Ready
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-symbol">⚗</div>
+
+        <p>Aurelia Calculator</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
